@@ -1,0 +1,79 @@
+
+* { 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{ 
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    padding: 100px;
+    margin-left: 200px;
+    padding: 100px;
+}
+
+/* Tela Principal */
+
+.main-screen{ 
+    background: red;
+    border: 3px solid rgb(177, 2, 2);
+    padding: 4px;
+    height: 450px;
+    width: 400px;
+}
+
+.upper{ 
+    border: 3px solid rgb(177, 2, 2);
+    display: flex;
+    height: 100px;
+}
+
+#big-button{ 
+    background: #1769A5;
+    width: 30px;
+    height: 30px;
+    margin-right: 0px;
+}
+
+#red{ 
+    background: red;
+    width: 10px;
+    height: 10px;
+    
+}
+
+#yellow{ 
+    background: yellow;
+    width: 10px;
+    height: 10px;
+}
+
+#green{ 
+    background: green;
+    width: 10px;
+    height: 10px;
+}
+
+#screen{ 
+    border: 25px solid #DEDEDE;
+    background: black;
+    width: 360px;
+    height: 200px;
+    margin-top: 100px;
+    margin-left: 15px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Segunda Tela */
+
+.command-screen{ 
+    border: 3px solid rgb(168, 16, 16);
+    background: red;
+    margin-top: 150px;
+    width: 300px;
+    height: 300px;
+}
+
+
