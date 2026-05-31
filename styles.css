@@ -16,7 +16,7 @@ body{
 
 /* Tela Principal */
 
-.main-screen{ 
+#main-screen{ 
     background: linear-gradient( to left, rgb(216, 25, 25), rgb(206, 57, 57) );
     border: 3px solid rgb(177, 2, 2);
     border-radius: 10px;
@@ -78,17 +78,79 @@ body{
     border-radius:10px;
 }
 
+#border-screen{
+    display: flex;
+    position: absolute;
+    top: 251px;
+    margin-left: 175px;
+}
+
+.mini-buttons{ 
+    background-color: rgb(255, 0, 0);
+    border: 2px solid rgb(116, 103, 103);
+    border-radius: 10px;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Setas de Interação */
+
+#dpad-container{ 
+    background-color: #D61E1E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45px;
+    height: 152px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 280px;
+}
+
+.arrow{ 
+    background: linear-gradient(135deg, #444, #222);
+    border: 2px solid #111;
+    color: #fff;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #000, inset 0 3px 6px rgba(255, 255, 255, 0.1); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease;
+}
+
 /*////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* Segunda Tela */
 
-.command-screen{ 
+#command-screen{ 
     border: 3px solid rgb(180, 21, 21);
     background: linear-gradient( to right, rgb(255, 0, 0), rgb(202, 0, 0) );
     border-radius: 10px;
     margin-top: 100px;
-    width: 300px;
+    width: 360px;
     height: 400px;
 }
+
+.dpad-horizontal {
+  display: flex;
+}
+
+.arrow:active {
+  box-shadow: 
+    0 0px 0 #000, inset 0 4px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(4px);
+}
+
+.arrow-left { border-radius: 5px 0 0 5px; margin-right: 35px;}
+.arrow-right { border-radius: 0 5px 5px 0; }
+.arrow-up { border-radius: 5px 5px 0 0; }
+.arrow-down { border-radius: 0 0 5px 5px; }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* OUTROS */
@@ -117,4 +179,6 @@ body{
     height: 50px;
     border-radius: 15px;
 }
+
+/*///////////////////////////////// TESTES */
 
