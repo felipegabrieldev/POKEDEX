@@ -65,7 +65,7 @@ body{
     transform: translateY(4px);
 }
 
-#red{ 
+#off{ 
     background: red;
     width: 25px;
     height: 25px;
@@ -78,7 +78,7 @@ body{
     height: 25px;
 }
 
-#green{ 
+#start{ 
     background: green;
     width: 25px;
     height: 25px;
@@ -299,26 +299,25 @@ body{
     border-radius: 15px;
 }
 
-/*///////////////////////////////// TESTES //////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////*/
+/* ALTERAÇÕES DO JAVA-SCRIPT */
 
-
-/*
-
-img{ 
-    width: 194px;
-    height: 150px;
-    margin-left: 60px;
+#big-button {
+    background: linear-gradient(to right, rgb(111, 0, 255), rgb(79, 79, 255));
+    transition: background 0.3s ease;
 }
 
-*/
-
-/*
-
-img{ 
-
-    width: 110px;
-    height: 110px;
-    border-radius: 10px;
+#big-button.aceso {
+    background: #001aff; 
+    box-shadow: 0 0 15px #4400ff; 
 }
 
-*/
+#screen.aceso { 
+    background: white;
+}
+
+.logo-animada {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
