@@ -1,11 +1,14 @@
 
 * { 
+      font-family: "Roboto", sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
 body{ 
+    width: 80vw;
+    height: 110vh;
     display: flex;
     align-items: flex-start;
     margin: 0;
@@ -83,6 +86,7 @@ body{
 
 #screen{ 
     border: 25px solid #DEDEDE;
+    outline: 3px solid #000000;
     background: linear-gradient(-15deg, rgb(0, 0, 0), rgb(101, 101, 107));
     width: 360px;
     height: 200px;
@@ -132,7 +136,7 @@ body{
     width: 35px;
     height: 35px;
     position: absolute;
-    bottom: 100px;
+    margin-top: 40px;
     left: 320px;
     border-radius: 50px;
 }
@@ -143,7 +147,7 @@ body{
     width: 150px;
     height: 70px;
     position: absolute;
-    bottom: 30px;
+    margin-top: 60px;
     left: 380px;
     border-radius: 10px;
 }
@@ -225,10 +229,46 @@ body{
     border: 3px solid rgb(180, 21, 21);
     background: linear-gradient( to right, rgb(255, 0, 0), rgb(202, 0, 0) );
     box-shadow: 0 3px 0 #575555, inset 0 3px 6px rgba(255, 255, 255, 0.1); 
+    display: flex;
     border-radius: 10px;
     margin-top: 100px;
     width: 360px;
     height: 400px;
+}
+
+.small-screen{ 
+    background: linear-gradient(rgb(0, 0, 0), rgb(57, 57, 59));
+    border: 2px solid white;
+    width: 110px;
+    height: 110px;
+    margin-top: 40px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.dice{ 
+    background: linear-gradient(cyan, blue);
+    border: 2px solid white;
+    width: 180px;
+    height: 220px;
+    margin-top: 40px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.info{ 
+    background: rgb(255, 255, 255);
+    border: 2px solid black;
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    margin-top: 340px;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+
+.text{ 
+    padding: 10px;
 }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -262,9 +302,23 @@ body{
 /*///////////////////////////////// TESTES //////////////////////////////////////////////////////////////*/
 
 
+/*
+
 img{ 
     width: 194px;
     height: 150px;
     margin-left: 60px;
 }
 
+*/
+
+/*
+
+img{ 
+
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+}
+
+*/
