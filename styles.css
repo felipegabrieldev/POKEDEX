@@ -14,22 +14,29 @@ body{
     padding: 100px;
 }
 
+/*
+
 /* Tela Principal */
 
 #main-screen{ 
     background: linear-gradient( to left, rgb(216, 25, 25), rgb(206, 57, 57) );
     border: 3px solid rgb(177, 2, 2);
+    box-shadow: 0 3px 0 #575555, inset 0 3px 6px rgba(255, 255, 255, 0.1); 
     border-radius: 10px;
     padding: 4px;
     height: 500px;
     width: 400px;
 }
 
+
+
 .color-buttons{ 
+    box-shadow: 0 3px 0 #575555, inset 0 3px 6px rgba(255, 255, 255, 0.1); 
     margin-right: 10px;
     border-radius: 50px;
     border: 2px solid;
     cursor: pointer;
+    transition: all 0.1s ease;
 }
 
 .upper{ 
@@ -47,6 +54,12 @@ body{
     width: 60px;
     height: 60px;
     margin-right: 15px;
+}
+
+.color-buttons:active {
+  box-shadow: 
+    0 0px 0 #000, inset 0 4px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(4px);
 }
 
 #red{ 
@@ -88,11 +101,75 @@ body{
 .mini-buttons{ 
     background-color: rgb(255, 0, 0);
     border: 2px solid rgb(116, 103, 103);
+    box-shadow: 0 3px 0 #575555, inset 0 3px 3px rgba(255, 255, 255, 0.1); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
     border-radius: 10px;
     width: 15px;
     height: 15px;
     margin-right: 10px;
     cursor: pointer;
+
+}
+
+.mini-buttons:active{ 
+    transform: translateY(4px);
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////*/
+/* EXTRAS (SEM FUNÇÃO) */
+/* são pura estetica */
+
+#extras{ 
+    display: flex;
+}
+
+.circle{ 
+    background: linear-gradient(black, gray);
+    border: 2px solid rgb(63, 57, 57);
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    bottom: 100px;
+    left: 320px;
+    border-radius: 50px;
+}
+
+.green-lantern{ 
+    background: linear-gradient(green, rgb(0, 228, 0));
+    border: 2px solid black;
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    bottom: 30px;
+    left: 380px;
+    border-radius: 10px;
+}
+
+.lines{ 
+
+    border: 2px solid black;
+    width: 20px;
+    height: 6px;
+    margin-top: 40px;
+}
+
+.line-red{ 
+    background: red;
+    margin-right: 10px;
+    position: absolute;
+    left: 515px;
+    border-radius: 10px;
+}
+
+.line-blue{ 
+    background: rgb(76, 0, 255);
+    margin-right: 10px;
+    position: absolute;
+    left: 375px;
+    border-radius: 10px;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -107,34 +184,23 @@ body{
     height: 152px;
     padding: 20px;
     border-radius: 10px;
-    margin-left: 280px;
+    position: absolute;
+    left: 600px;
 }
 
 .arrow{ 
     background: linear-gradient(135deg, #444, #222);
     border: 2px solid #111;
     color: #fff;
+    box-shadow: 0 4px 0 #000, inset 0 3px 6px rgba(255, 255, 255, 0.1); 
     font-size: 16px;
     width: 40px;
     height: 40px;
     cursor: pointer;
-    box-shadow: 0 4px 0 #000, inset 0 3px 6px rgba(255, 255, 255, 0.1); 
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.1s ease;
-}
-
-/*////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* Segunda Tela */
-
-#command-screen{ 
-    border: 3px solid rgb(180, 21, 21);
-    background: linear-gradient( to right, rgb(255, 0, 0), rgb(202, 0, 0) );
-    border-radius: 10px;
-    margin-top: 100px;
-    width: 360px;
-    height: 400px;
 }
 
 .dpad-horizontal {
@@ -151,6 +217,19 @@ body{
 .arrow-right { border-radius: 0 5px 5px 0; }
 .arrow-up { border-radius: 5px 5px 0 0; }
 .arrow-down { border-radius: 0 0 5px 5px; }
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Segunda Tela */
+
+#command-screen{ 
+    border: 3px solid rgb(180, 21, 21);
+    background: linear-gradient( to right, rgb(255, 0, 0), rgb(202, 0, 0) );
+    box-shadow: 0 3px 0 #575555, inset 0 3px 6px rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
+    margin-top: 100px;
+    width: 360px;
+    height: 400px;
+}
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* OUTROS */
@@ -180,5 +259,12 @@ body{
     border-radius: 15px;
 }
 
-/*///////////////////////////////// TESTES */
+/*///////////////////////////////// TESTES //////////////////////////////////////////////////////////////*/
+
+
+img{ 
+    width: 194px;
+    height: 150px;
+    margin-left: 60px;
+}
 
