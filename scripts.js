@@ -7,6 +7,7 @@ const tela = document.querySelector('#screen');
 const greenLantern = document.querySelector('.green-lantern');
 
 const smallScreen = document.querySelector('.small-screen');
+const identify = document.querySelector('.identify');
 const dice = document.querySelector('.dice');
 const infoBox = document.querySelector('.info');
 
@@ -51,6 +52,12 @@ function ligarPokedex() {
         isLigado = true;
         botaoOn.classList.add('aceso');
         tela.classList.add('aceso');
+
+        identify.classList.add('aceso')
+        smallScreen.classList.add('aceso');
+        dice.classList.add('aceso');
+        infoBox.classList.add('aceso');
+
         greenLantern.classList.add('aceso');
         tela.innerHTML = '<img src="./assets/logos/pikachu-logo.gif" alt="poke-logo" class="logo-animada">';
 
@@ -61,9 +68,16 @@ function resetSite() {
     isLigado = false;
     botaoOn.classList.remove('aceso');
     tela.classList.remove('aceso');
+
+    identify.classList.remove('aceso');
+    smallScreen.classList.remove('aceso');
+    dice.classList.remove('aceso');
+    infoBox.classList.remove('aceso');
+
     greenLantern.classList.remove('aceso');
     tela.innerHTML = '';
     if (smallScreen) smallScreen.innerHTML = '';
+    if (identify) identify.innerHTML = '';
     if (dice) dice.innerHTML = '';
     if (infoBox) infoBox.innerHTML = '<p class="text"> type: </p>';
 
@@ -90,12 +104,17 @@ function mostrarPokemon() {
         `;
     }
 
+    if (identify) {
+        identify.innerHTML = `
+            <p class="identify-id"> <b> #${pokemon.id.toString().padStart(3, '0')} </b> </p>
+            <p class="identify-name"> <b> ${pokemon.name} </b> </p>
+        `;
+    }
     if (dice) {
         dice.innerHTML = `
             <p class="pokemon-description">${pokemon.descricao}</p>
         `;
     }
-
     if (infoBox) {
         infoBox.innerHTML = `
             <p class="text"> <b> tipo: </b> ${pokemon.tipo}</p>
