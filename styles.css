@@ -93,6 +93,10 @@ body{
     margin-top: 40px;
     margin-left: 15px;
     border-radius:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 #border-screen{
@@ -244,16 +248,29 @@ body{
     margin-top: 40px;
     margin-left: 20px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .dice{ 
     background: linear-gradient(cyan, blue);
     border: 2px solid white;
+    color: #000;
     width: 180px;
     height: 220px;
     margin-top: 40px;
     margin-left: 20px;
     border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.pokemon-description {
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.4;
 }
 
 .info{ 
@@ -302,32 +319,60 @@ body{
 /*///////////////////////////////////////////////////////////////////////////////////////////////*/
 /* ALTERAÇÕES DO JAVA-SCRIPT */
 
-#big-button {
+#big-button{
     background: linear-gradient(to right, rgb(111, 0, 255), rgb(79, 79, 255));
     transition: background 0.3s ease;
 }
 
-#big-button.aceso {
+#big-button.aceso{
     background: #001aff; 
     box-shadow: 0 0 25px #4400ff; 
 }
 
-#screen.aceso { 
+#screen.aceso{ 
     background: white;
 }
 
-.green-lantern.aceso { 
+.green-lantern.aceso{ 
     background: linear-gradient(to right, rgb(21, 255, 0), rgb(0, 255, 98));
     transition: background 0.3s ease;
 }
 
-.green-lantern.aceso {
+.green-lantern.aceso{
     background: #00ff2a; 
     box-shadow: 10px 10px 15px #00ff55; 
 }
 
-.logo-animada {
+.line-red.aceso{ 
+    background: linear-gradient(to right, rgb(94, 3, 0), rgb(138, 17, 17));
+    transition: background 0.3s ease;
+}
+
+.logo-animada{
     width: 100%;
     height: 100%;
     object-fit: contain; 
+}
+
+
+.pokemon-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-card img,
+.pokemon-img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.small-screen img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
