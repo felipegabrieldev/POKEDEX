@@ -1,41 +1,49 @@
 
 const botaoOn = document.querySelector('#big-button');
-const tela = document.querySelector('#screen');
-
 const botaoOff = document.querySelector('#off');
+const botaoStart = document.querySelector('#start')
+
+const tela = document.querySelector('#screen');
+const greenLantern = document.querySelector('.green-lantern');
+
 const setaCima = document.querySelector('.arrow-up');
 const setaDireita = document.querySelector('.arrow-right');
 
-let IsLigado = false;
+let isLigado = false;
 
-botaoOn.addEventListener("click", ()=> { 
-    if (!IsLigado){ 
-        botaoOn.classList.add('aceso');
-        tela.classList.add('aceso');
-        tela.innerHTML = '<img src="./assets/pikachu-logo.gif" alt="poke-logo" class="logo-animada">'
-       IsLigado = true;
-    } else {
-        botaoOn.classList.remove('aceso');
-        tela.classList.remove('aceso');
-        tela.innerHTML = ''; 
-        IsLigado = false;
-        } 
- });
-
-function desligarPokedex() {
-    isLigado = false;
-    botaoOn.classList.remove('aceso');
-    tela.innerHTML = '';
-}
-
-botaoOn.addEventListener('click', ()=> {
+function ligarPokedex() {
     if (!isLigado) {
         isLigado = true;
         botaoOn.classList.add('aceso');
-        tela.innerHTML = '<img src="caminho-da-sua-imagem/logo.gif" alt="Pokemon Logo" class="logo-animada">';
+        tela.classList.add('aceso');
+        greenLantern.classList.add('aceso');
+        tela.innerHTML = '<img src="./assets/logos/pikachu-logo.gif" alt="poke-logo" class="logo-animada">';
+
     }
+}
+
+function resetSite() {
+    isLigado = false;
+    botaoOn.classList.remove('aceso');
+    tela.classList.remove('aceso');
+    greenLantern.classList.remove('aceso');
+    tela.innerHTML = '';
+
+}
+
+////////////////////////////////////////////////////////////
+
+setaCima.addEventListener('click', function(){ 
+    if (!isLigado) return; 
+    console.log("Avançar Pokémon (Seta Cima)");
 });
 
-botaoOff.addEventListener('click', ()=> { 
-    desligarPokedex();
-});
+setaDireita.addEventListener('click', function(){ 
+    if (!isLigado) return;
+    console.log("Avançar pokémon (seta direita)");
+})
+
+////////////////////////////////////////////////////////////
+
+botaoOn.addEventListener('click', ligarPokedex);
+botaoOff.addEventListener('click', resetSite);
