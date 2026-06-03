@@ -13,6 +13,8 @@ const infoBox = document.querySelector('.info');
 
 const setaCima = document.querySelector('.arrow-up');
 const setaDireita = document.querySelector('.arrow-right');
+const setaBaixo = document.querySelector('.arrow-down');
+const setaEsquerda = document.querySelector('.arrow-left');
 
 const listaPokemon = [ 
     { 
@@ -42,12 +44,38 @@ const listaPokemon = [
         descricao: "Enquanto se banha ao sol, consegue converter a luz em energia. Consequentemente, é mais potente no verão."
     }, 
 
+    { 
+        id: 4,
+        name: "Charmander",
+        tipo: "Fogo",
+        imagem: "./assets/assets-dex/004.png",
+        pixel: "./assets/imgs/pixel-charmander.png",
+        descricao: "A chama em sua cauda demonstra a força de sua energia vital. Se Charmander estiver fraco, a chama também arderá fracamente.",
+    },
+    
+    { 
+        id: 5,
+        name: "Charmeleon",
+        tipo: "Fogo",
+        imagem: "./assets/assets-dex/005.png",
+        pixel: "./assets/imgs/pixel-charmeleon.png",
+        descricao: "É uma pessoa de natureza muito impulsiva, por isso está sempre à procura de oponentes para enfrentar. Sua agressividade não se aplaca se não vencer.",
+    },
+        
+    { 
+        id: 6,
+        name: "Charizard",
+        tipo: "Fogo / Voador",
+        imagem: "./assets/assets-dex/006.png",
+        pixel: "./assets/imgs/pixel-charizard.png",
+        descricao: "Ele usa suas asas para voar bem alto. Quanto mais experiência adquire em batalha, maior a temperatura em que suas chamas queimam.",
+    },
 ]
 
 let pokemonAtual = 0
 let isLigado = false;
 
-function ligarPokedex() {
+function ligarPokedex(){
     if (!isLigado) {
         isLigado = true;
         botaoOn.classList.add('aceso');
@@ -64,7 +92,7 @@ function ligarPokedex() {
     }
 }
 
-function resetSite() {
+function resetSite(){
     isLigado = false;
     botaoOn.classList.remove('aceso');
     tela.classList.remove('aceso');
@@ -85,7 +113,7 @@ function resetSite() {
 
 ////////////////////////////////////////////////////////////
 
-function mostrarPokemon() {
+function mostrarPokemon(){
     const pokemon = listaPokemon[pokemonAtual];
     if (!pokemon) {
         console.warn('Pokémon não encontrado em listaPokemon:', pokemonAtual);
@@ -122,10 +150,30 @@ function mostrarPokemon() {
     }
 }
 
+function avançarPokemon(){ 
+    pokemonAtual++;
+
+    if(pokemonAtual >= listaPokemon.length){ 
+        pokemonAtual = 0;
+    }
+
+    mostrarPokemon();
+}
+
+function voltarPokemon(){ 
+    pokemonAtual--;
+
+    if(pokemonAtual < 0){
+        pokemonAtual = listaPokemon.length - 1;
+    }
+
+    mostrarPokemon();
+}
+
 ////////////////////////////////////////////////////////////
 
 // EVENTO DO BOTÃO START
-botaoStart.addEventListener('click', function() {
+botaoStart.addEventListener('click', function(){
     if (!isLigado) return; 
 
     pokemonAtual = 0; 
@@ -134,12 +182,22 @@ botaoStart.addEventListener('click', function() {
 
 setaCima.addEventListener('click', function(){ 
     if (!isLigado) return; 
-    console.log("Avançar Pokémon (Seta Cima)");
+    avançarPokemon()
 });
 
 setaDireita.addEventListener('click', function(){ 
     if (!isLigado) return;
-    console.log("Avançar pokémon (seta direita)");
+    avançarPokemon()
+})
+
+setaEsquerda.addEventListener('click', function(){ 
+    if (!isLigado) return;
+    voltarPokemon()
+})
+
+setaBaixo.addEventListener('click', function(){ 
+    if (!isLigado) return;
+    voltarPokemon()
 })
 
 ////////////////////////////////////////////////////////////
