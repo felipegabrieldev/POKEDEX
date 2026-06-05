@@ -259,6 +259,22 @@ const listaPokemon = [
 let pokemonAtual = 0
 let isLigado = false;
 
+function obterCorPorTipo(tipo) {
+    const chave = tipo.toLowerCase();
+    if (chave.includes('planta')) return '#8bc34a';
+    if (chave.includes('elétrico') || chave.includes('eletrico')) return '#ffeb3b';
+    if (chave.includes('veneno') || chave.includes('venenoso')) return '#9c27b0';
+    if (chave.includes('inseto')) return '#b2ff59';
+    if (chave.includes('fogo')) return '#f44336';
+    if (chave.includes('água') || chave.includes('agua')) return '#2196f3';
+    if (chave.includes('voador')) return '#9e9e9e';
+    if (chave.includes('normal')) return '#ffffff';
+    return '#ffffff';
+}
+
+/////////////////////////////////////////////////////////////
+/// LIGA / DESLIGA
+
 function ligarPokedex(){
     if (!isLigado) {
         isLigado = true;
@@ -288,6 +304,7 @@ function resetSite(){
 
     greenLantern.classList.remove('aceso');
     tela.innerHTML = '';
+    tela.style.background = '';
     if (smallScreen) smallScreen.innerHTML = '';
     if (identify) identify.innerHTML = '';
     if (dice) dice.innerHTML = '';
@@ -296,6 +313,7 @@ function resetSite(){
 }
 
 ////////////////////////////////////////////////////////////
+/// FUNCTIONS DAS SCREENS
 
 function mostrarPokemon(){
     const pokemon = listaPokemon[pokemonAtual];
@@ -304,8 +322,11 @@ function mostrarPokemon(){
         return;
     }
 
+    const corTipo = obterCorPorTipo(pokemon.tipo);
+    tela.style.background = corTipo;
+
     tela.innerHTML = `
-        <div class="pokemon-card">
+        <div class="pokemon-card" style="background: ${corTipo};">
             <img src="${pokemon.imagem}" alt="${pokemon.name}" class="pokemon-img">
         </div>
     `;
@@ -355,14 +376,17 @@ function voltarPokemon(){
 }
 
 ////////////////////////////////////////////////////////////
+/// EVENTO DO BOTÃO START
 
-// EVENTO DO BOTÃO START
 botaoStart.addEventListener('click', function(){
     if (!isLigado) return; 
 
     pokemonAtual = 0; 
     mostrarPokemon(); 
 });
+
+////////////////////////////////////////////////////////////
+/// FUNCTIONS DE COMANDO 
 
 setaCima.addEventListener('click', function(){ 
     if (!isLigado) return; 
@@ -385,6 +409,7 @@ setaBaixo.addEventListener('click', function(){
 })
 
 ////////////////////////////////////////////////////////////
+/// EVENTOS DE CLICK
 
 botaoOn.addEventListener('click', ligarPokedex);
 botaoOff.addEventListener('click', resetSite);
