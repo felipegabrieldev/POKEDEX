@@ -16,6 +16,10 @@ const setaDireita = document.querySelector('.arrow-right');
 const setaBaixo = document.querySelector('.arrow-down');
 const setaEsquerda = document.querySelector('.arrow-left');
 
+const botaoPlay = document.querySelector('#play-music');
+const botaoPause = document.querySelector('#pause-music');
+const musicaBackground = new Audio('./audios/1-02. Theme Of Pallet Town.mp3');
+
 const listaPokemon = [ 
     { 
         id: 1,
@@ -305,6 +309,12 @@ function resetSite(){
     greenLantern.classList.remove('aceso');
     tela.innerHTML = '';
     tela.style.background = '';
+
+    musicaBackground.pause();
+    musicaBackground.currentTime = 0;
+    botaoPlay.classList.remove('disponivel');
+    botaoPause.classList.remove('disponivel');
+
     if (smallScreen) smallScreen.innerHTML = '';
     if (identify) identify.innerHTML = '';
     if (dice) dice.innerHTML = '';
@@ -414,6 +424,21 @@ setaBaixo.addEventListener('click', function(){
     if (!isLigado) return;
     voltarPokemon()
 })
+
+/////////////////////////////////////////////////////////////
+/// MUSIC BUTTONS
+
+botaoPlay.addEventListener('click', function(){ 
+    if (!isLigado) return; // Só toca se a Pokédex estiver ligada!
+    
+    musicaBackground.play();
+});
+
+botaoPause.addEventListener('click', function() {
+    if (!isLigado) return; // Só pausa se estiver ligada
+    
+    musicaBackground.pause();
+});
 
 ////////////////////////////////////////////////////////////
 /// EVENTOS DE CLICK
