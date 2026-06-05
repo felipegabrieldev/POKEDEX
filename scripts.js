@@ -70,7 +70,191 @@ const listaPokemon = [
         pixel: "./assets/imgs/pixel-charizard.png",
         descricao: "Ele usa suas asas para voar bem alto. Quanto mais experiência adquire em batalha, maior a temperatura em que suas chamas queimam.",
     },
+
+    { 
+        id: 7,
+        name: "Squirtle",
+        tipo: "Água",
+        imagem: "./assets/assets-dex/007.png",
+        pixel: "./assets/imgs/pixel-squirtle.png",
+        descricao: "Sua carapaça é macia logo após o nascimento. Em pouco tempo, ela se torna tão resistente que um dedo que a cutuca ricocheteia sem problemas.",
+    },
+    
+    { 
+        id: 8,
+        name: "Wartortle",
+        tipo: "Água",
+        imagem: "./assets/assets-dex/008.png",
+        pixel: "./assets/imgs/pixel-wartortle.png",
+        descricao: "Costuma se esconder na água para espreitar presas desavisadas. Enquanto nada rapidamente, move as orelhas para manter o equilíbrio.",
+    },
+        
+    { 
+        id: 9,
+        name: "Blastoise ",
+        tipo: "Água",
+        imagem: "./assets/assets-dex/009.png",
+        pixel: "./assets/imgs/pixel-blastoise.png",
+        descricao: "Possui jatos de combustível em sua carapaça. Este Pokémon impressionante usa esses jatos para investir contra os inimigos com toda a força de um foguete.",
+    },
+      
+    { 
+        id: 10,
+        name: "Caterpie",
+        tipo: "Inseto",
+        imagem: "./assets/assets-dex/010.png",
+        pixel: "./assets/imgs/pixel-caterpie.png",
+        descricao: "Para se proteger, libera um odor horrível pela antena em sua cabeça para afastar os inimigos.",
+    },  
+
+    { 
+        id: 11,
+        name: "Metapod",
+        tipo: "Inseto",
+        imagem: "./assets/assets-dex/011.png",
+        pixel: "./assets/imgs/pixel-metapod.png",
+        descricao: "Está aguardando o momento certo para evoluir. Nesta fase, só consegue endurecer, por isso permanece imóvel para evitar ataques.",
+    },
+
+    { 
+        id: 12,
+        name: "Butterfree",
+        tipo: "Inseto / Voador",
+        imagem: "./assets/assets-dex/012.png",
+        pixel: "./assets/imgs/pixel-butterfree.png",
+        descricao: "Ele adora o néctar das flores e consegue localizar áreas floridas que contenham até mesmo quantidades mínimas de pólen.",
+    },
+    
+    { 
+        id: 13,
+        name: "Weedle",
+        tipo: "Inseto / Venenoso",
+        imagem: "./assets/assets-dex/013.png",
+        pixel: "./assets/imgs/diversos.png",
+        descricao: "Cuidado com o ferrão afiado em sua cabeça. Ele se esconde na grama e nos arbustos, onde se alimenta de folhas.",
+    },
+    
+    { 
+        id: 14,
+        name: "Kakuna",
+        tipo: "Inseto / Venenoso",
+        imagem: "./assets/assets-dex/014.png",
+        pixel: "./assets/imgs/kakuna-pixel.png",
+        descricao: "Capaz de se mover apenas ligeiramente. Quando ameaçado, pode estender seu ferrão e envenenar seu inimigo.",
+    },
+    
+    { 
+        id: 15,
+        name: "Beedrill",
+        tipo: "Inseto / Venenoso",
+        imagem: "./assets/assets-dex/015.png",
+        pixel: "./assets/imgs/pixel-bedril.png",
+        descricao: "Possui três ferrões venenosos nas patas dianteiras e na cauda. São usados ​​para golpear repetidamente o inimigo.",
+    },
+    
+    { 
+        id: 16,
+        name: "Pidgey",
+        tipo: "Normal / Voador",
+        imagem: "./assets/assets-dex/016.png",
+        pixel: "./assets/imgs/pixel-pidyei.png",
+        descricao: "Muito dócil. Se atacado, costuma levantar areia para se proteger em vez de revidar.",
+    },
+    
+    { 
+        id: 17,
+        name: "Pidgeotto",
+        tipo: "Normal / Voador",
+        imagem: "./assets/assets-dex/017.png",
+        pixel: "./assets/imgs/pixel-Pidgeotto.png",
+        descricao: "Este Pokémon é cheio de vitalidade. Ele voa constantemente por seu vasto território em busca de presas.",
+    },
+
+    { 
+        id: 18,
+        name: "Pidgeot",
+        tipo: "Normal / Voador",
+        imagem: "./assets/assets-dex/018.png",
+        pixel: "./assets/imgs/pixel-pigeot.png",
+        descricao: "Este Pokémon voa à velocidade de Mach 2, em busca de presas. Suas grandes garras são temidas como armas cruéis.",
+    },
+    
+    { 
+        id: 19,
+        name: "Ratata",
+        tipo: "Normal",
+        imagem: "./assets/assets-dex/019.png",
+        pixel: "./assets/imgs/ratata-pixel.png",
+        descricao: "Mastiga qualquer coisa com suas presas. Se você vir um, pode ter certeza de que outros 40 vivem na área.",
+    },
+    
+    { 
+        id: 20,
+        name: "Raticate",
+        tipo: "Normal",
+        imagem: "./assets/assets-dex/020.png",
+        pixel: "./assets/imgs/diversos.png",
+        descricao: "Suas patas traseiras são palmadas. Elas funcionam como nadadeiras, permitindo que ele nade em rios e cace presas.",
+    },
+    
+    { 
+        id: 21,
+        name: "Spearow",
+        tipo: "Normal / Voador",
+        imagem: "./assets/assets-dex/021.png",
+        pixel: "./assets/imgs/pixel-Spearow.png",
+        descricao: "Inábil para voar alto. No entanto, consegue voar muito rápido para proteger seu território.",
+    },
+    
+    { 
+        id: 22,
+        name: "Fearow",
+        tipo: "Normal / Voador",
+        imagem: "./assets/assets-dex/022.png",
+        pixel: "./assets/imgs/pixel-Fearow.png",
+        descricao: "Um Pokémon que existe há muitos anos. Se pressentir perigo, ele voa alto e para longe instantaneamente.",
+    },
+
+    { 
+        id: 23,
+        name: "Ekans",
+        tipo: "Venenoso",
+        imagem: "./assets/assets-dex/023.png",
+        pixel: "./assets/imgs/pixel-Ekans.png",
+        descricao: "Ela consegue destacar livremente a mandíbula para engolir presas grandes inteiras. No entanto, pode ficar pesada demais para se mover.",
+    },
+
+    
+    { 
+        id: 24,
+        name: "Arbok",
+        tipo: "Venenoso",
+        imagem: "./assets/assets-dex/024.png",
+        pixel: "./assets/imgs/pixel-Arbok.png",
+        descricao: "O padrão em sua barriga parece ser um rosto assustador. Inimigos fracos fugirão só de ver o padrão.",
+    },
+
+    
+    { 
+        id: 25,
+        name: "Pikachu",
+        tipo: "Elétrico",
+        imagem: "./assets/assets-dex/025.png",
+        pixel: "./assets/imgs/pixel-Pikachu.png",
+        descricao: "Quando se irrita, descarrega imediatamente a energia armazenada nas bolsas em suas bochechas.",
+    },
+
+    
+    { 
+        id: 26,
+        name: "Raichu",
+        tipo: "Elétrico",
+        imagem: "./assets/assets-dex/026.png",
+        pixel: "./assets/imgs/diversos.png",
+        descricao: "Quando sua eletricidade aumenta, seus músculos são estimulados e ele se torna mais agressivo do que o normal.",
+    },
 ]
+
 
 let pokemonAtual = 0
 let isLigado = false;
