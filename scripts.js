@@ -349,8 +349,15 @@ function mostrarPokemon(){
         `;
     }
     if (infoBox) {
+        const tipos = pokemon.tipo.split('/').map(tipo => tipo.trim());
+        const chips = tipos.map(tipo => {
+            const cor = obterCorPorTipo(tipo);
+            return `<div class="type-chip" style="background: ${cor};">${tipo}</div>`;
+        }).join('');
+
         infoBox.innerHTML = `
-            <p class="text"> <b> tipo: </b> ${pokemon.tipo}</p>
+            <p class="text"><b> tipo: </b></p>
+            <div class="type-chip-container">${chips}</div>
         `;
     }
 }
