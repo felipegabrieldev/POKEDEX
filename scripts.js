@@ -2,6 +2,7 @@
 const botaoOn = document.querySelector('#big-button');
 const botaoOff = document.querySelector('#off');
 const botaoStart = document.querySelector('#start');
+const botaoRandom = document.querySelector('#random');
 
 const tela = document.querySelector('#screen');
 const greenLantern = document.querySelector('.green-lantern');
@@ -259,7 +260,6 @@ const listaPokemon = [
     },
 ]
 
-
 let pokemonAtual = 0
 let isLigado = false;
 
@@ -439,6 +439,33 @@ botaoPause.addEventListener('click', function() {
     
     musicaBackground.pause();
 });
+
+////////////////////////////////////////////////////////////
+
+botaoRandom.addEventListener('click', function(){ 
+    if (!isLigado) return;
+
+    tela.style.background = '#FAFBFB';
+    tela.innerHTML = `
+        <div class="captura-container">
+            <img src="./assets/logos/pokeball.gif" class="pokeball-gif">
+        </div>
+    `;
+
+    if (dice) {
+        dice.innerHTML = '<p class="captura-texto">Capturando Pokémon selvagem...</p>';
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * listaPokemon.length);
+    pokemonAtual = indiceAleatorio;
+
+    setTimeout(function() {
+
+        if (isLigado) {
+            mostrarPokemon();
+        }
+    }, 2000);
+})
 
 ////////////////////////////////////////////////////////////
 /// EVENTOS DE CLICK
