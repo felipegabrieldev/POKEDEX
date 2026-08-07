@@ -25,3 +25,7 @@
 <h2> 🖥️ Funcionalidades </h2>
 <p> 📖 Visualização dos Pokémon </p>
 <p> 🎨 Interface inspirada em uma Pokédex </p>
+
+<h2> IMAGEM DO PROJETO: </h2>
+<br>
+<img src="C:\Users\Log Home\Desktop\Dev Club\PROJETOS\POKEDEX (Quase Completo)\assets\logos\README.jpg">
