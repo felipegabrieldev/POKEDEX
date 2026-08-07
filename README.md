@@ -26,4 +26,9 @@
 <p> 📖 Visualização dos Pokémon </p>
 <p> 🎨 Interface inspirada em uma Pokédex </p>
 
+<h2> 🔮 Próximas melhorias </h2>
 
+<p> --> Adicionar mais informações sobre os Pokémon </p>
+<p> --> Adicionar a responsividade </p>
+
+<h3> 💻 Projeto desenvolvido por Felipe Gabriel. </h3>
